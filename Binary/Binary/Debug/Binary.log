@@ -1,37 +1,13 @@
-﻿Build started 12/8/2014 11:07:18 AM.
+﻿Build started 12/8/2014 9:27:16 PM.
      1>Project "C:\Users\Dpnd\Binary\Binary\Binary\Binary.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
          Source.cpp
-     1>c:\users\dpnd\binary\binary\binary\binarytree.h(178): error C2244: 'BinaryTree<T>::displayInOrder' : unable to match function definition to an existing declaration
-                 c:\users\dpnd\binary\binary\binary\binarytree.h(46) : see declaration of 'BinaryTree<T>::displayInOrder'
-                 definition
-                 'void BinaryTree<T>::displayInOrder(BinaryTree<T>::TreeNode *) const'
-                 existing declarations
-                 'void BinaryTree<T>::displayInOrder(void) const'
-     1>c:\users\dpnd\binary\binary\binary\binarytree.h(190): error C2995: 'void BinaryTree<T>::displayPreOrder(BinaryTree<T>::TreeNode *) const' : function template has already been defined
-                 c:\users\dpnd\binary\binary\binary\binarytree.h(51) : see declaration of 'BinaryTree<T>::displayPreOrder'
-     1>c:\users\dpnd\binary\binary\binary\binarytree.h(201): error C2995: 'void BinaryTree<T>::displayPostOrder(BinaryTree<T>::TreeNode *) const' : function template has already been defined
-                 c:\users\dpnd\binary\binary\binary\binarytree.h(54) : see declaration of 'BinaryTree<T>::displayPostOrder'
-     1>c:\users\dpnd\binary\binary\binary\binarytree.h(52): error C2333: 'BinaryTree<T>::displayPreOrder' : error in function declaration; skipping function body
-                 with
-                 [
-                     T=std::string
-                 ]
-                 c:\users\dpnd\binary\binary\binary\source.cpp(11) : see reference to class template instantiation 'BinaryTree<T>' being compiled
-                 with
-                 [
-                     T=std::string
-                 ]
-     1>c:\users\dpnd\binary\binary\binary\binarytree.h(55): error C2333: 'BinaryTree<T>::displayPostOrder' : error in function declaration; skipping function body
-                 with
-                 [
-                     T=std::string
-                 ]
-     1>c:\users\dpnd\binary\binary\binary\source.cpp(11): error C2371: 'tree' : redefinition; different basic types
-                 c:\users\dpnd\binary\binary\binary\source.cpp(9) : see declaration of 'tree'
-     1>Done Building Project "C:\Users\Dpnd\Binary\Binary\Binary\Binary.vcxproj" (Build target(s)) -- FAILED.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Dpnd\Binary\Binary\Debug\Binary.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Dpnd\Binary\Binary\Debug\Binary.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Dpnd\Binary\Binary\Debug\Binary.lib" /MACHINE:X86 Debug\Source.obj
+         Binary.vcxproj -> C:\Users\Dpnd\Binary\Binary\Debug\Binary.exe
+     1>Done Building Project "C:\Users\Dpnd\Binary\Binary\Binary\Binary.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.48
+Time Elapsed 00:00:01.25

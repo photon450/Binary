@@ -15,8 +15,8 @@ private:
 	{
 		T word;
 		int count;
-		TreeNode *Left;
-		TreeNode *Right;
+		TreeNode *left;
+		TreeNode *right;
 	};
 
 	TreeNode *root;
@@ -25,9 +25,9 @@ private:
 	void destroySubTree(TreeNode *);
 	void deleteNode(T, TreeNode *&); // t for word or l for adding another count.
 	void makeDeletion( TreeNode *&);
-	/* void displayInOrder(TreeNode *) const;
+    void displayInOrder(TreeNode *) const;   // ......
 	void displayPreOrder(TreeNode *) const;
-	void displayPostOrder(TreeNode *) const; */
+	void displayPostOrder(TreeNode *) const;    
 
 public:
 	BinaryTree()
@@ -39,20 +39,21 @@ public:
 	{ destroySubTree(root); }
 
 	  // Binary Tree ops
-	void insertNode(T);               // for indexing no need for L
+	void insertNode(T);               
 	bool searchNode(T);
 	void remove(T);
 
+	     // so passes root into the function recursively. notice how I overloaded, this one takes no parameters
 	void displayInOrder() const
 	{
-		displayInOrder(root);
+		 displayInOrder(root);  // this refrences the private member version.
 	}
 
-    void displayPreOrder(TreeNode *) const
-	{  displayPreOrder(root); }
+    void displayPreOrder() const
+	{  displayPreOrder(root); }     // same for this. 
 
-	void displayPostOrder(TreeNode *) const
-	{     displayPostOrder(root);   }
+	void displayPostOrder() const
+	{     displayPostOrder(root);   }      // also the private member version.
 
 };
 

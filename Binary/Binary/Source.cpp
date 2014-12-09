@@ -6,9 +6,9 @@ using namespace std;
 
 int main()
 {
-	string tree;
+	
 
-	BinaryTree<string> tree;
+	BinaryTree<string> t;   // create tree. 
 
 	return 0;
 }
