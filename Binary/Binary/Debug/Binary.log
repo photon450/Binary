@@ -1,0 +1,37 @@
+﻿Build started 12/8/2014 11:07:18 AM.
+     1>Project "C:\Users\Dpnd\Binary\Binary\Binary\Binary.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
+         Source.cpp
+     1>c:\users\dpnd\binary\binary\binary\binarytree.h(178): error C2244: 'BinaryTree<T>::displayInOrder' : unable to match function definition to an existing declaration
+                 c:\users\dpnd\binary\binary\binary\binarytree.h(46) : see declaration of 'BinaryTree<T>::displayInOrder'
+                 definition
+                 'void BinaryTree<T>::displayInOrder(BinaryTree<T>::TreeNode *) const'
+                 existing declarations
+                 'void BinaryTree<T>::displayInOrder(void) const'
+     1>c:\users\dpnd\binary\binary\binary\binarytree.h(190): error C2995: 'void BinaryTree<T>::displayPreOrder(BinaryTree<T>::TreeNode *) const' : function template has already been defined
+                 c:\users\dpnd\binary\binary\binary\binarytree.h(51) : see declaration of 'BinaryTree<T>::displayPreOrder'
+     1>c:\users\dpnd\binary\binary\binary\binarytree.h(201): error C2995: 'void BinaryTree<T>::displayPostOrder(BinaryTree<T>::TreeNode *) const' : function template has already been defined
+                 c:\users\dpnd\binary\binary\binary\binarytree.h(54) : see declaration of 'BinaryTree<T>::displayPostOrder'
+     1>c:\users\dpnd\binary\binary\binary\binarytree.h(52): error C2333: 'BinaryTree<T>::displayPreOrder' : error in function declaration; skipping function body
+                 with
+                 [
+                     T=std::string
+                 ]
+                 c:\users\dpnd\binary\binary\binary\source.cpp(11) : see reference to class template instantiation 'BinaryTree<T>' being compiled
+                 with
+                 [
+                     T=std::string
+                 ]
+     1>c:\users\dpnd\binary\binary\binary\binarytree.h(55): error C2333: 'BinaryTree<T>::displayPostOrder' : error in function declaration; skipping function body
+                 with
+                 [
+                     T=std::string
+                 ]
+     1>c:\users\dpnd\binary\binary\binary\source.cpp(11): error C2371: 'tree' : redefinition; different basic types
+                 c:\users\dpnd\binary\binary\binary\source.cpp(9) : see declaration of 'tree'
+     1>Done Building Project "C:\Users\Dpnd\Binary\Binary\Binary\Binary.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.48
