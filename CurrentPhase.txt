@@ -1,0 +1,20 @@
+Completed Phase:
+Research Binary Search Tree mechanics for this project
+        *struct vs class.
+Then look at template version in pg 1159-1180.
+
+Results:
+      Struct will be permanently chosen.
+      Template version in book continue to be foundation.
+Current Phase:
+Work out Bigger v. smaller logic in the tree.
+make sure logic works out in ordering.
+
+
+Next Phase:
+  Work on the counter for each word.
+
+
+Upcoming:
+Read in the file.
+Handle non alphanumeric characters, w/ c-strings?
