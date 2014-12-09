@@ -62,7 +62,7 @@ void BinaryTree<T>::insert(TreeNode *&nodePtr, TreeNode *&newNode)      // only 
 {
    if (nodePtr == NULL)
       nodePtr = newNode;                  // Insert the node.
-   else if (newNode->value < nodePtr->value)
+   else if (newNode->word < nodePtr->word)
       insert(nodePtr->left, newNode);     // Search the left branch
    else 
       insert(nodePtr->right, newNode);    // Search the right branch
@@ -75,7 +75,7 @@ void BinaryTree<T>::insertNode(T item)                                 // create
 
    // Create a new node and store num in it.
    newNode = new TreeNode;
-   newNode->value = item;
+   newNode->word = item;
    newNode->left = newNode->right = NULL;
    
    // Insert the node.
@@ -101,9 +101,9 @@ bool BinaryTree<T>::searchNode(T item)   // determines if value exsists in tree 
 
    while (nodePtr)
    {
-      if (nodePtr->value == item)
+      if (nodePtr->word == item)
          return true;
-      else if (item < nodePtr->value)
+      else if (item < nodePtr->word)
          nodePtr = nodePtr->left;
       else
          nodePtr = nodePtr->right;
@@ -119,9 +119,9 @@ void BinaryTree<T>::remove(T item)   // removes the node were node is same as T
 template <class T>
 void BinaryTree<T>::deleteNode(T item, TreeNode *&nodePtr)           // finds the node   (makes above work...)
 {
-   if (item < nodePtr->value)
+   if (item < nodePtr->word)
       deleteNode(item, nodePtr->left);
-   else if (item > nodePtr->value)
+   else if (item > nodePtr->word)
       deleteNode(item, nodePtr->right);
    else
       makeDeletion(nodePtr);
@@ -168,12 +168,12 @@ void BinaryTree<T>::makeDeletion(TreeNode *&nodePtr)   // this takes a refrence 
 
 
 template <class T>
-void BinaryTree<T>::displayInOrder(TreeNode *nodePtr) const
+void BinaryTree<T>::displayInOrder(TreeNode *nodePtr) const  
 {
    if (nodePtr)
    {
       displayInOrder(nodePtr->left);
-      cout << nodePtr->value << endl;
+      cout << nodePtr->word << endl;
       displayInOrder(nodePtr->right);
    }
 }
@@ -184,7 +184,7 @@ void BinaryTree<T>::displayPreOrder(TreeNode *nodePtr) const
 {
    if (nodePtr)
    {
-      cout << nodePtr->value << endl;
+      cout << nodePtr->word << endl;
       displayPreOrder(nodePtr->left);     
       displayPreOrder(nodePtr->right);
    }
@@ -197,7 +197,7 @@ void BinaryTree<T>::displayPostOrder(TreeNode *nodePtr) const
    {
       displayPostOrder(nodePtr->left);    
       displayPostOrder(nodePtr->right);
-      cout << nodePtr->value << endl;
+      cout << nodePtr->word << endl;
    }
 }
 
