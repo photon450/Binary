@@ -33,7 +33,7 @@ public:
 	BinaryTree()
 	{
 		root = nullptr;
-		/* count = 0; */ // why no 0?
+		/* count = 0;  */ // why no 0?
 	}
 
 	~BinaryTree()
@@ -62,12 +62,14 @@ template <class T>
 void BinaryTree<T>::insert(TreeNode *&nodePtr, TreeNode *&newNode)      // only inserts nodes into tree, not with values. the root and new value. 
 {
    if (nodePtr == NULL)
-   {  if(newNode->word == nodePtr->word)   // stops if word already in tree.
-       { nodePtr->count++; 
-           return; 
-       }
+   {  
         nodePtr = newNode;  // Insert the node if not
    }
+   if(newNode->word == nodePtr->word)   // stops if word already in tree.
+       {  nodePtr->count++;
+        /*  delete *newNode; */
+            return;
+       } 
    else if (newNode->word < nodePtr->word )  
       insert(nodePtr->left, newNode);     // Search the left branch
    else 
@@ -82,6 +84,7 @@ void BinaryTree<T>::insertNode(T item)                                 // create
    // Create a new node and store num in it.
    newNode = new TreeNode;
    newNode->word = item;
+   newNode->count = 1;                    // 
    newNode->left = newNode->right = NULL;
      // Insert the node.
    insert(root, newNode);

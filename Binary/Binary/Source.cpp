@@ -11,15 +11,16 @@ void input()
 {
 fstream filest;
 
-	filest.open("C:\\Users\\Dpnd\\Downloads\\project\\Assignment5\\Article.txt", ios::in );
+	filest.open("C:\\Users\\Dpnd\\Downloads\\project\\Assignment5\\Article2.txt", ios::in );
 	if(!filest)
 	   cout<< "error" << endl;
 	while( !filest.fail())
 	{
 		string m;
+		string r;
 		filest >> m;
-		test(m);
-		t.insertNode(m);
+		r = test(m);
+		t.insertNode(r);
 		
 	}
 }
