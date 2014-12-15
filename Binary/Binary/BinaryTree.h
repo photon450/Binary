@@ -33,6 +33,7 @@ public:
 	BinaryTree()
 	{
 		root = nullptr;
+		/* count = 0; */ // why no 0?
 	}
 
 	~BinaryTree()
@@ -58,11 +59,16 @@ public:
 };
 
 template <class T>
-void BinaryTree<T>::insert(TreeNode *&nodePtr, TreeNode *&newNode)      // only inserts nodes into tree, not with values.
+void BinaryTree<T>::insert(TreeNode *&nodePtr, TreeNode *&newNode)      // only inserts nodes into tree, not with values. the root and new value. 
 {
    if (nodePtr == NULL)
-      nodePtr = newNode;                  // Insert the node.
-   else if (newNode->word < nodePtr->word)
+   {  if(newNode->word == nodePtr->word)   // stops if word already in tree.
+       { nodePtr->count++; 
+           return; 
+       }
+        nodePtr = newNode;  // Insert the node if not
+   }
+   else if (newNode->word < nodePtr->word )  
       insert(nodePtr->left, newNode);     // Search the left branch
    else 
       insert(nodePtr->right, newNode);    // Search the right branch
@@ -77,8 +83,7 @@ void BinaryTree<T>::insertNode(T item)                                 // create
    newNode = new TreeNode;
    newNode->word = item;
    newNode->left = newNode->right = NULL;
-   
-   // Insert the node.
+     // Insert the node.
    insert(root, newNode);
 }
 
@@ -173,7 +178,7 @@ void BinaryTree<T>::displayInOrder(TreeNode *nodePtr) const
    if (nodePtr)
    {
       displayInOrder(nodePtr->left);
-      cout << nodePtr->word << endl;
+      cout << nodePtr->word << "-> Frequency:" << nodePtr->count<<  endl;
       displayInOrder(nodePtr->right);
    }
 }
