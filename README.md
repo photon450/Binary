@@ -7,6 +7,6 @@ Class project in pre alpha. Currently has issues running.
 Current Phase:
    Engine Building.
 Next Phase:
-   Counting and Orderning(Logic) Enhancments.
+   Counting and Ordering(Logic) Enhancments.
 Upcoming:
    Reading articles and other documents into program.
