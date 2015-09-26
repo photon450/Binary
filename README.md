@@ -2,7 +2,7 @@ Binary
 ======
 
 A rudamentary program to scan and count word relevancy in documents.
-Class project in pre alpha. Currently dosent work.
+Class project in pre alpha. Currently has issues running.
 
 Current Phase:
    Engine Building.
