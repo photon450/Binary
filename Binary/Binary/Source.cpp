@@ -6,12 +6,13 @@
 using namespace std;
 
 BinaryTree<string> t;   // create tree. 
+string filename; 
 
-void input()
+void input(string)
 {
 fstream filest;
 
-	filest.open("C:\\Users\\Dpnd\\Downloads\\project\\Assignment5\\Article2.txt", ios::in );
+	filest.open(filename, ios::in );
 	if(!filest)
 	   cout<< "error" << endl;
 	while( !filest.fail())
@@ -27,13 +28,16 @@ fstream filest;
 
 int main()
 {
-	
+	cout << "Pleaseinput file path,   \n" ;
+	cout << "remmebr to use double \\\\ \n";
+	cin >> filename;
 	
 	/* t.insertNode("4nd stuff");
 	t.insertNode("2nd stuff");
 	t.insertNode("3rd stuff"); */
-	input();
+	input(filename);
 	t.displayInOrder(); //calls private member version since no parameter given  (from smallest to biggest)
+	cin.get();
 	cin.get();
 		return 0;
 }
